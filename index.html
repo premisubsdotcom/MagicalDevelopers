@@ -1,1 +1,385 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Magical Developers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-link:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .social-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .telegram:hover {
+            background: linear-gradient(135deg, #0088cc, #229ed9);
+            color: white;
+        }
+
+        .whatsapp:hover {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+        }
+
+        .instagram:hover {
+            background: linear-gradient(135deg, #e4405f, #833ab4, #fccc63);
+            color: white;
+        }
+
+        .twitter:hover {
+            background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+            color: white;
+        }
+
+        /* Large desktops and up */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 600px;
+                padding: 80px 60px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .contact-text {
+                font-size: 1.4rem;
+            }
+
+            .social-links {
+                gap: 40px;
+            }
+
+            .social-link {
+                padding: 25px;
+            }
+
+            .social-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Tablets landscape */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .container {
+                max-width: 500px;
+                padding: 50px 30px;
+            }
+
+            .social-links {
+                gap: 25px;
+            }
+        }
+
+        /* Tablets portrait */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .container {
+                padding: 40px 25px;
+                max-width: 450px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-text {
+                font-size: 1.1rem;
+            }
+
+            .social-links {
+                gap: 20px;
+                justify-content: space-around;
+            }
+
+            .social-link {
+                padding: 18px;
+                min-width: 90px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-name {
+                font-size: 13px;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 30px 15px;
+                max-width: 100%;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            .contact-text {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .social-links {
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-link {
+                padding: 15px 20px;
+                width: 200px;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .social-icon {
+                width: 35px;
+                height: 35px;
+                margin-bottom: 0;
+            }
+
+            .social-name {
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .social-link {
+                width: 180px;
+                padding: 12px 15px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .social-name {
+                font-size: 12px;
+            }
+        }
+
+        /* Landscape orientation for mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+
+            .container {
+                padding: 20px;
+                margin-top: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .contact-text {
+                margin-bottom: 15px;
+            }
+
+            .social-links {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .social-link {
+                width: auto;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .social-icon {
+                margin-bottom: 5px;
+            }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Magical Developers</h1>
+        
+        <p class="contact-text">Contact us on:</p>
+        
+        <div class="social-links">
+            <a href="https://t.me/magicaldevelopers" class="social-link telegram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                <span class="social-name">Telegram</span>
+            </a>
+
+            <a href="https://wa.me/magicaldevelopers" class="social-link whatsapp">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.56-.01-.188 0-.495.074-.754.371-.26.297-.99.967-.99 2.357 0 1.39 1.014 2.734 1.156 2.922.142.188 2.006 3.062 4.861 4.296.679.294 1.21.469 1.623.602.682.217 1.303.186 1.793.113.547-.082 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.04 3.8c-4.535 0-8.216 3.682-8.216 8.217 0 1.444.371 2.807 1.019 3.985l-.582 4.455 4.540-.595c1.135.647 2.457 1.017 3.87 1.017 4.534 0 8.216-3.681 8.216-8.216C20.257 7.462 16.576 3.8 12.041 3.8M12.04 1.567c5.753 0 10.449 4.695 10.449 10.449 0 5.754-4.696 10.449-10.449 10.449-1.846 0-3.582-.456-5.1-1.338L0 22.895l1.895-6.63c-.928-1.586-1.410-3.4-1.410-5.299C.485 6.262 5.287 1.567 12.04 1.567"/>
+                </svg>
+                <span class="social-name">WhatsApp</span>
+            </a>
+
+            <a href="https://instagram.com/magicaldevelopers" class="social-link instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span class="social-name">Instagram</span>
+            </a>
+
+            <a href="https://twitter.com/magicaldevelopers" class="social-link twitter">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span class="social-name">X (Twitter)</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add sparkle effects
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 2000);
+        }
+
+        setInterval(createSparkle, 300);
+
+        // Add smooth hover animations
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.05)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
